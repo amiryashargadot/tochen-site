@@ -1,0 +1,51 @@
+:root{
+  --brand-orange:#f28c00;
+  --dark:#3f3f3f;
+  --border:#d9d9d9;
+  --muted:#6b6b6b;
+  --maxw:1100px;
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{direction:rtl;margin:0;font-family:system-ui,-apple-system,"Heebo",Segoe UI,Arial,sans-serif;background:#fff;color:#111}
+a{color:inherit;text-decoration:none}
+
+.wrap{max-width:var(--maxw);margin-inline:auto;padding-inline:18px}
+.rule{border-top:4px solid var(--brand-orange);margin:26px 0 18px}
+
+.hero{padding:28px 0 8px}
+.h1{margin:0;font-size:clamp(32px,4vw,54px);line-height:1.05}
+.h2{margin:10px 0 0;font-size:clamp(18px,2.2vw,28px);color:var(--dark)}
+.lead{margin:18px 0 0;color:var(--muted);font-size:18px;line-height:1.6}
+
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:18px}
+@media (max-width:900px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.grid{grid-template-columns:1fr}}
+
+.card{border:1px solid var(--border);border-radius:10px;overflow:hidden;background:#fff;display:flex;flex-direction:column;min-height:260px}
+.thumb{aspect-ratio:16/9;background:#efefef;display:block;overflow:hidden}
+.thumb img{width:100%;height:100%;object-fit:cover;display:block}
+.body{padding:14px 14px 16px;display:flex;flex-direction:column;gap:8px}
+.name{margin:0;font-size:20px;line-height:1.2}
+.desc{margin:0;color:var(--muted);line-height:1.5;font-size:15px}
+.btn{margin-top:auto;display:inline-flex;align-items:center;justify-content:center;border:2px solid var(--brand-orange);color:var(--brand-orange);
+  padding:10px 12px;border-radius:10px;font-weight:800}
+.btn:hover{background:rgba(242,140,0,.08)}
+
+.topbar{background:var(--dark);color:#fff;padding:14px 0}
+.topbar-inner{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.crumb{color:#ff4d4d;font-weight:900}
+
+.section-title{margin:0;font-size:26px}
+.section-lead{margin:8px 0 0;color:var(--muted);line-height:1.6}
+
+.three{display:grid;grid-template-columns:2fr 1fr 1fr;gap:16px;margin-top:14px}
+@media (max-width:800px){.three{grid-template-columns:1fr}}
+
+.box{border:2px solid #3b66b1;border-radius:10px;overflow:hidden;background:#f3f3f3;min-height:160px}
+.box img{width:100%;height:100%;object-fit:cover;display:block}
+
+.footer{background:var(--dark);padding:14px 0;margin-top:34px}
+.footer-inner{display:flex;justify-content:center;gap:10px;flex-wrap:wrap}
+.footer-btn{background:#fff;color:#222;border:2px solid #222;padding:10px 22px;border-radius:8px;font-weight:900}
