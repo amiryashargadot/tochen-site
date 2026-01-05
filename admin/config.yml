@@ -1,0 +1,68 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+locale: he
+
+collections:
+  - name: "content"
+    label: "תוכן האתר"
+    files:
+      - name: "site"
+        label: "עמוד הבית + פרטי קשר"
+        file: "content/site.json"
+        format: "json"
+        fields:
+          - { label: "כותרת ראשית", name: "title", widget: "string" }
+          - { label: "כותרת משנה", name: "subtitle", widget: "string" }
+          - { label: "טקסט פתיחה", name: "lead", widget: "text" }
+          - label: "כפתורי תחתית"
+            name: "footer"
+            widget: "object"
+            fields:
+              - { label: "WhatsApp (קישור מלא)", name: "whatsapp", widget: "string", required: false }
+              - { label: "טלפון (tel:)", name: "phone", widget: "string", required: false }
+              - { label: "מייל (mailto:)", name: "email", widget: "string", required: false }
+
+      - name: "topics"
+        label: "נושאים"
+        file: "content/topics.json"
+        format: "json"
+        fields:
+          - label: "רשימת נושאים"
+            name: "topics"
+            widget: "list"
+            summary: "{{fields.title}} ({{fields.slug}})"
+            fields:
+              - { label: "Slug (באנגלית, בלי רווחים)", name: "slug", widget: "string" }
+              - { label: "כותרת", name: "title", widget: "string" }
+              - { label: "תיאור קצר (לכרטיס)", name: "description", widget: "text" }
+              - { label: "תמונה ראשית (לכרטיס)", name: "cover", widget: "image", required: false }
+              - { label: "פתיח בעמוד נושא", name: "intro", widget: "text", required: false }
+              - label: "תוכן חינוכי"
+                name: "edu"
+                widget: "object"
+                fields:
+                  - { label: "משפט קצר", name: "lead", widget: "text", required: false }
+                  - { label: "תמונות (3)", name: "images", widget: "list", min: 0, max: 3, field: { label: "תמונה", name: "image", widget: "image" } }
+              - label: "מצגות"
+                name: "slides"
+                widget: "object"
+                fields:
+                  - { label: "משפט קצר", name: "lead", widget: "text", required: false }
+                  - { label: "תמונות (3)", name: "images", widget: "list", min: 0, max: 3, field: { label: "תמונה", name: "image", widget: "image" } }
+              - label: "משחקים"
+                name: "games"
+                widget: "object"
+                fields:
+                  - { label: "משפט קצר", name: "lead", widget: "text", required: false }
+                  - { label: "תמונות (3)", name: "images", widget: "list", min: 0, max: 3, field: { label: "תמונה", name: "image", widget: "image" } }
+              - label: "עיצוב גרפי"
+                name: "design"
+                widget: "object"
+                fields:
+                  - { label: "משפט קצר", name: "lead", widget: "text", required: false }
+                  - { label: "תמונות (3)", name: "images", widget: "list", min: 0, max: 3, field: { label: "תמונה", name: "image", widget: "image" } }
