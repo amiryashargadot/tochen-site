@@ -3,30 +3,162 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>תוכן ענייני</title>
-  <link rel="stylesheet" href="/assets/style.css">
+  <title>תוכן עניינים – להכניס עניין לתוכן</title>
+  <meta name="description" content="סטודיו לחשיבה, דיוק והטמעה של מסרים. תוכן שנחווה, נזכר ומניע לפעולה.">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: "Heebo", Arial, sans-serif;
+      background: #111;
+      color: #eee;
+      line-height: 1.7;
+    }
+
+    .wrap {
+      max-width: 900px;
+      margin: auto;
+      padding: 48px 24px;
+    }
+
+    h1 {
+      font-size: 42px;
+      margin-bottom: 8px;
+      font-weight: 800;
+    }
+
+    h1 span {
+      color: #ff9f1c;
+    }
+
+    h2 {
+      font-size: 22px;
+      font-weight: 400;
+      color: #bbb;
+      margin-top: 0;
+    }
+
+    section {
+      margin-top: 56px;
+    }
+
+    .statement {
+      font-size: 22px;
+      max-width: 720px;
+    }
+
+    .statement strong {
+      color: #fff;
+    }
+
+    .divider {
+      margin: 48px 0;
+      height: 1px;
+      background: #333;
+    }
+
+    .list {
+      max-width: 720px;
+      font-size: 18px;
+    }
+
+    .list p {
+      margin: 12px 0;
+    }
+
+    .quote {
+      font-size: 24px;
+      font-weight: 600;
+      color: #ff9f1c;
+      max-width: 720px;
+    }
+
+    .contact {
+      margin-top: 64px;
+      font-size: 18px;
+    }
+
+    .contact a {
+      color: #ff9f1c;
+      text-decoration: none;
+      display: inline-block;
+      margin: 8px 0;
+    }
+
+    .contact a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      margin-top: 72px;
+      font-size: 14px;
+      color: #777;
+    }
+  </style>
 </head>
+
 <body>
-  <main class="wrap">
-    <section class="hero">
-      <h1 class="h1" id="siteTitle">תוכן <span style="color:var(--brand-orange)">ענייני</span></h1>
-      <h2 class="h2" id="siteSubtitle"></h2>
-      <p class="lead" id="siteLead"></p>
+  <div class="wrap">
+
+    <!-- פתיחה -->
+    <h1>תוכן <span>עניינים</span></h1>
+    <h2>להכניס עניין לתוכן</h2>
+
+    <section class="statement">
+      מסרים לא נופלים בגלל ניסוח.<br>
+      הם נופלים כי הם לא נקלטים.
+      <br><br>
+      <strong>אני עוזר לאנשים וארגונים להבין מה הם באמת רוצים להגיד —  
+      ולגרום לזה להישאר.</strong>
     </section>
 
-    <div class="rule"></div>
+    <div class="divider"></div>
 
-    <h3 style="margin:0 0 6px;">נושאים</h3>
-    <p style="margin:0;color:var(--muted)">כל כרטיס מוביל לעמוד הנושא שלו.</p>
+    <!-- הבעיה -->
+    <section class="list">
+      תוכן נאמר, אבל לא תמיד נחווה.<br>
+      קהלים שומעים, אבל לא זוכרים.<br>
+      מסרים עוברים ליד, במקום לעבור דרך.
+    </section>
 
-    <section class="grid" id="topicsGrid"></section>
-  </main>
+    <div class="divider"></div>
 
-  <footer class="footer">
-    <div class="wrap footer-inner" id="footerLinks"></div>
-  </footer>
+    <!-- הגישה -->
+    <section class="list">
+      העבודה שלי מתחילה לפני המילים:
+      <p>– הבנה עמוקה של המטרה והקהל</p>
+      <p>– דיוק המסר למה שבאמת צריך להיאמר</p>
+      <p>– בניית דרך העברה שמערבת, מפעילה ומטמיעה</p>
+      <br>
+      כחלק מהשיטה, אני מפתח ומשתמש גם <strong>בכלים משחקיים</strong> —  
+      קלפים, חידות ופורמטים חווייתיים —  
+      כדי להפוך מסר לרגע, ורגע לזיכרון.
+    </section>
 
-  <script src="/assets/app.js"></script>
-  <script>Tochen.initHome();</script>
+    <div class="divider"></div>
+
+    <!-- מה יוצא -->
+    <section class="quote">
+      פחות רעש.<br>
+      יותר בהירות.<br>
+      מסר שאנשים לוקחים איתם.
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- קשר -->
+    <section class="contact">
+      אם זה מדבר אליך — אפשר לדבר.
+      <br><br>
+      📞 <a href="tel:+972546798763">054-679-8763</a><br>
+      ✉️ <a href="mailto:Amirgadot85@gmail.com">Amirgadot85@gmail.com</a><br>
+      💬 <a href="https://wa.me/972546798763" target="_blank">וואטסאפ</a>
+    </section>
+
+    <footer>
+      © תוכן עניינים
+    </footer>
+
+  </div>
 </body>
 </html>
